@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * Custom modules for Durpal Commerce. It provides add additional form.
+ */
+
+// error_reporting(E_ALL);
+// ini_set('display_errors', TRUE);
+// ini_set('display_startup_errors', TRUE);
+
+
+/**
+ * Implements hook__checkout_pane_info().
+ *
+ * Make other Pane in /admin/commerce/config/checkout
+ */
+function drupal_commerce_add_additinal_form_checkout_pane_info() {
+  $panes['drupal_commerce_add_additinal_form'] = array(
+    'title' => t('Registration Information'),
+    'page' => 'checkout',
+    'weight' => 10,
+    'file' => 'includes/drupal_commerce_add_additinal_form.checkout_pane.inc',
+    'base' => 'drupal_commerce_add_additinal_form_pane',
+  );
+  return $panes;
+}

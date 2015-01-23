@@ -1,0 +1,5 @@
+name = "Drupal Commerce Add Additinal Form"
+description = "You can add additinal form inside paymeny process"
+core = "7.x"
+dependencies[] = commerce
+version = "0.1"
